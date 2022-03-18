@@ -1,8 +1,7 @@
 //variables styles
 @import './utils/variables';
-//base styles
+@import './utils/breakpoints';
 @import './base/base';
-
 //common styles
 @import './components/container';
 @import './components/logo';

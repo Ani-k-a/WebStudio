@@ -1,6 +1,11 @@
 .features {
   background-color: var(--white-colore);
-
+  &__container {
+    @media screen and (min-width: $tablet) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
   &__title {
     position: absolute;
     width: 1px;
@@ -14,9 +19,26 @@
     overflow: hidden;
   }
   &__list {
-    display: flex;
-    margin: 0;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
+  &__item {
+    width: 450px;
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 8 * 15px) / 4);
+    }
+  }
+  //   &__item:not(:last-child) {
+  //     margin-bottom: 30px;
+  //   }
   &__box {
     box-sizing: border-box;
     position: relative;
@@ -25,18 +47,14 @@
     align-items: center;
     justify-content: center;
     height: 120px;
-    width: 270px;
+    width: 100%;
     margin-bottom: 30px;
     background-color: var(--backgroud-light-colore);
     border-radius: 4px;
   }
-  &__item {
-    width: 270px;
-  }
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+
   &__point {
+    text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
     font-style: normal;
