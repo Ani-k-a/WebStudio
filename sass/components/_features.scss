@@ -29,16 +29,13 @@
     width: 450px;
 
     @media screen and (min-width: $tablet) {
-      width: calc((100% - 4 * 15px) / 2);
       margin: 15px;
+      width: calc((100% - 4 * 15px) / 2);
     }
     @media screen and (min-width: $desktop) {
       width: calc((100% - 8 * 15px) / 4);
     }
   }
-  //   &__item:not(:last-child) {
-  //     margin-bottom: 30px;
-  //   }
   &__box {
     box-sizing: border-box;
     position: relative;
