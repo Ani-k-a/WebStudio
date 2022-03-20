@@ -20,4 +20,11 @@ ul {
   margin: 0;
   list-style: none;
 }
-// calk size of flex width calk: ((100% - кол-во маржиновв строке * значения маржина)/кол-во элементов в строке);
+.title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}

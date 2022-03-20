@@ -1,9 +1,39 @@
 .features {
   background-color: var(--white-colore);
   &__container {
-    @media screen and (min-width: $tablet) {
-      padding-left: 0px;
-      padding-right: 0px;
+    .clients__list {
+      margin-top: auto;
+      justify-content: space-between;
+      text-align: center;
+      display: flex;
+    }
+    .clients__link {
+      transition-property: border-color, fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      fill: var(--clients-border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      height: 92px;
+      width: 170px;
+      content: '';
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid var(--clients-border-color);
+      border-radius: 4px;
+
+      &:hover,
+      &:focus {
+        border-color: var(--accent-colore);
+        fill: var(--accent-colore);
+      }
+    }
+
+    .clients__item:not(:last-child) {
+      margin-right: 30px;
     }
   }
   &__title {
@@ -19,14 +49,17 @@
     overflow: hidden;
   }
   &__list {
+    display: flex;
+    flex-wrap: wrap;
     @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
       margin: -15px;
+    }
+    @media screen and (min-width: $tablet) {
+      margin: -15px 0px;
     }
   }
   &__item {
-    width: 450px;
+    width: calc(100%-2 * 15px);
 
     @media screen and (min-width: $tablet) {
       margin: 15px;

@@ -16,6 +16,18 @@
       <div class="container header__container">
         <nav class="site-nav">
           <a class="logo site-nav__logo" href="./index.html" lang="en">Web<span class="logohalf site-nav__logohalf">Studio</span></a>
+          <button class="site-nav__button is-open" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+              <use class="site-nav__icon" href="./images/symbol-defs.svg#icon-menu_lines"></use>
+              <use class="site-nav__icon--close" href="./images/symbol-defs.svg#icon-memu_close"></use>
+            </svg>
+          </button>
+          
+          <!-- выпадающее меню -->
+          <div class="menu-container" id="menu-container" data-menu>Контент меню</div>
+          
+          
+          
           <ul class="site-nav__list">
             <li class="site-nav__item">
              <a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a>
@@ -55,7 +67,7 @@
           <div class="modal">
             <button class="modal__button"  type="button" data-modal-close>
                 <svg class="modal__icon">
-                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                  <use href="./images/symbol-defs.svg#icon-modal_close"></use>
                 </svg>
             </button>
             <div class="form">
@@ -66,7 +78,7 @@
                   <span class="form__wrapper">
                     <input class="form__input" type="text" name="user-name" required />
                     <svg class="form__icon">
-                      <use href="./images/symbol-defs.svg#icon-person-black"></use>
+                      <use href="./images/symbol-defs.svg#icon-modal_person"></use>
                    </svg>
                 </span>
                 </label>
@@ -75,7 +87,7 @@
                   <span class="form__wrapper">
                     <input class="form__input" type="tel" name="user-phone" required />
                     <svg class="form__icon">
-                      <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+                      <use href="./images/symbol-defs.svg#icon-modal_phone"></use>
                     </svg>
                   </span>
                 </label>
@@ -84,7 +96,7 @@
                   <span class="form__wrapper">
                     <input class="form__input" type="email" name="user-mail" required />
                     <svg class="form__icon">
-                      <use href="./images/symbol-defs.svg#icon-email-black"></use>
+                      <use href="./images/symbol-defs.svg#icon-modal_email"></use>
                     </svg>
                   </span>
                 </label>
@@ -95,7 +107,7 @@
                 <label class=" form__lable form__lable--checkbox">
                   <input class="form__input--checkbox" type="checkbox" name="checkbox" required />
                   <svg class="form__icon--checkbox">
-                      <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+                      <use href="./images/symbol-defs.svg#icon-madal_input"></use>
                   </svg>
                   <span class="form__text--checkbox">Соглашаюсь с рассылкой принимаю <a class="form__link form__link--checkbox" href="">Условия договора</a></span>
                 </label>
@@ -329,42 +341,42 @@
             <li class="clients__item">
               <a class="clients__link" href="" target="_blank" rel="noopen noreferrer">
                 <svg width="106px" height="60px">
-                  <use href="./images/symbol-defs.svg#icon-Logo1"></use>
+                  <use href="./images/symbol-defs.svg#icon-client1"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="" target="_blank" rel="noopen noreferrer">
                 <svg width="106px" height="60px">
-                  <use href="./images/symbol-defs.svg#icon-Logo2"></use>
+                  <use href="./images/symbol-defs.svg#icon-client2"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="" target="_blank" rel="noopen noreferrer">
                 <svg width="106px" height="60px">
-                  <use href="./images/symbol-defs.svg#icon-Logo3"></use>
+                  <use href="./images/symbol-defs.svg#icon-client3"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="" target="_blank" rel="noopen noreferrer">
                 <svg width="106px" height="60px">
-                  <use href="./images/symbol-defs.svg#icon-Logo4"></use>
+                  <use href="./images/symbol-defs.svg#icon-client4"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="" target="_blank" rel="noopen noreferrer">
                 <svg width="106px" height="60px">
-                  <use href="./images/symbol-defs.svg#icon-Logo5"></use>
+                  <use href="./images/symbol-defs.svg#icon-client5"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="" target="_blank" rel="noopen noreferrer">
                 <svg width="106px" height="60px">
-                  <use href="./images/symbol-defs.svg#icon-Logo6"></use>
+                  <use href="./images/symbol-defs.svg#icon-client6"></use>
                 </svg>
               </a>
             </li>
@@ -437,5 +449,6 @@
       </div>
       </footer>
       <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
   </body>
 </html>
