@@ -11,6 +11,9 @@ body {
   color: var(--primary-text-colore);
   letter-spacing: 0.03em;
 }
+body.modal-open {
+  overflow: hidden;
+}
 header {
   border-bottom: 1px solid var(--header-line-colore);
   background-color: var(--white-colore);

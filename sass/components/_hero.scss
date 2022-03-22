@@ -1,5 +1,5 @@
 .hero {
-  max-width: 480px;
+  width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -16,19 +16,18 @@
   background-size: cover;
 
   @media screen and (min-width: $tablet) {
-    max-width: 768px;
+    width: 768px;
   }
   @media screen and (min-width: $desktop) {
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1600px;
+    width: 1600px;
   }
   &__container {
     padding: 0;
     text-align: center;
   }
   &__slogan {
-    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -40,11 +39,12 @@
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    @media screen and (min-width: $tablet) {
+    @media screen and (max-width: 767px) {
+      max-width: 360px;
     }
     @media screen and (min-width: $desktop) {
       font-size: 44px;
-      width: 700px;
+      max-width: 1160px;
     }
   }
 }
