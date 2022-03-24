@@ -1,21 +1,37 @@
-.site-nav__button.is-open .site-nav__icon {
+.site-nav__icon--close {
   display: none;
 }
-.site-nav__icon--close {
+.site-nav__button.is-open .site-nav__icon {
   display: none;
 }
 .site-nav__button.is-open .site-nav__icon--close {
   display: block;
 }
-.menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: aqua;
-  text-align: center;
-  left: 0;
-  width: 100%;
-  &.is-open {
-    display: block;
+.site-nav__button {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  @media screen and (min-width: $tablet) {
+    display: none;
   }
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--white-colore);
+    left: 0;
+    width: 100%;
+    padding: 50px 40px;
+    &.is-open {
+      display: block;
+    }
+  }
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  text-align: center;
 }
