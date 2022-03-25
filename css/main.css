@@ -111,19 +111,54 @@ ul {
 }
 
 .site-nav__button.is-open .site-nav__icon--close {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--logo-dark-colore);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 19px;
+  height: 19px;
 }
 
 .site-nav__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   width: 40px;
   height: 40px;
-  padding: 0px;
+  background-color: var(--primary-background-color);
+  border: 0;
 }
 
 @media screen and (min-width: 768px) {
   .site-nav__button {
     display: none;
   }
+}
+
+.site-nav__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--logo-dark-colore);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 24px;
+  height: 16px;
+}
+
+.site-nav__button:hover > .site-nav__icon,
+.site-nav__button:focus > .site-nav__icon {
+  fill: var(--accent-colore);
+}
+
+.site-nav__button:hover > .site-nav__icon--close,
+.site-nav__button:focus > .site-nav__icon--close {
+  fill: var(--accent-colore);
 }
 
 .menu-container {
@@ -198,8 +233,12 @@ ul {
 
 .site-nav {
   display: block;
-  margin-right: auto;
-  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    margin: 0 auto 302px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -234,8 +273,10 @@ ul {
   }
 }
 
-.site-nav__item {
-  margin-right: 35px;
+@media screen and (min-width: 768px) {
+  .site-nav__item {
+    margin-right: 35px;
+  }
 }
 
 .site-nav__link {
@@ -249,6 +290,12 @@ ul {
   line-height: 1.18;
   letter-spacing: 0.02em;
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__link {
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -307,8 +354,10 @@ ul {
   }
 }
 
-.contacts__item {
-  display: block;
+@media screen and (max-width: 767px) {
+  .contacts__item {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -346,7 +395,7 @@ ul {
   fill: var(--light-text-colore);
 }
 
-@media screen and (maxn-width: 767px) {
+@media screen and (max-width: 767px) {
   .contacts__icon {
     display: none;
   }
