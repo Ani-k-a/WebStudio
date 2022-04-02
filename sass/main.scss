@@ -2,6 +2,9 @@
 @import './utils/variables';
 @import './utils/breakpoints';
 @import './base/base';
+@import './utils/mixins.scss';
+@import './utils/decimals.scss';
+
 //common styles
 @import './components/container';
 @import './components/logo';

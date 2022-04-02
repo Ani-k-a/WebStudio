@@ -68,6 +68,7 @@ img {
   text-align: center;
 }
 
+/* MEDIA QUERIES*/
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -149,7 +150,7 @@ img {
   z-index: 3;
   justify-content: center;
   align-items: center;
-  fill: var(--logo-dark-colore);
+  fill: var(--primary-text-colore);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -207,6 +208,7 @@ img {
 
 .social-contacts {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -493,16 +495,18 @@ img {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--hero-background-color);
-  background-image: linear-gradient(to right, var(--hero-overlay-colore), var(--hero-overlay-colore)), url(../images/hero_background.jpg);
+  background-image: linear-gradient(to right, var(--hero-overlay-colore), url(../images/hero/hero_background.jpg));
+  background-image: linear-gradient(to right, var(--hero-overlay-colore), -webkit-image-set(url(../images/hero/hero_background.webp) 1x));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    max-width: 480px;
+    background-image: linear-gradient(to right, var(--hero-overlay-colore), url(../images/hero/hero_background@2x.jpg));
+    background-image: linear-gradient(to right, var(--hero-overlay-colore), -webkit-image-set(url(../images/hero/hero_background@2x.webp) 2x));
   }
 }
 
@@ -539,7 +543,7 @@ img {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
   .hero__slogan {
     width: 100%;
     max-width: 360px;
@@ -1260,7 +1264,19 @@ img {
   line-height: 1.56;
   letter-spacing: 00.03em;
   color: var(--white-colore);
-  padding: 63px 24px;
+  padding: 77px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .overlay__text {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay__text {
+    padding: 63px 24px;
+  }
 }
 
 .projects-list__item:hover .overlay,

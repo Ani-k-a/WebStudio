@@ -4,16 +4,13 @@
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--hero-background-color);
-  background-image: linear-gradient(
-      to right,
-      var(--hero-overlay-colore),
-      var(--hero-overlay-colore)
-    ),
-    url(../images/hero/hero_background.jpg);
-  background-image: -webkit-image-set(url(../images/hero/hero_background.webp) 1x);
+  background-image: linear-gradient( to right, var(--hero-overlay-colore), 
+    url(../images/hero/hero_background.jpg));
+  background-image: linear-gradient(to right, var(--hero-overlay-colore), 
+  -webkit-image-set(url(../images/hero/hero_background.webp) 1x));
 @include mq(retina) {
-  background-image: url(../images/hero/hero_background@2x.jpg);
-  background-image: -webkit-image-set(url(../images/hero/hero_background@2x.webp) 2x);
+  background-image: linear-gradient(to right, var(--hero-overlay-colore), url(../images/hero/hero_background@2x.jpg));
+  background-image: linear-gradient(to right, var(--hero-overlay-colore), -webkit-image-set(url(../images/hero/hero_background@2x.webp) 2x));
 }
   background-repeat: no-repeat;
   background-position: center;
