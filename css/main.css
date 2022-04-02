@@ -19,6 +19,7 @@
   --mail-footer-text-color: rgba(255, 255, 255, 0.6);
   --mail-footer-border-color: solid rgba(255, 255, 255, 0.3);
   --modal-textarea-text-color: rgba(117, 117, 117, 0.5);
+  --logo-font-family: Raleway;
 }
 
 html {
@@ -93,7 +94,7 @@ img {
 
 .logo {
   color: var(--accent-colore);
-  font-family: Raleway;
+  font-family: var(--logo-font-family);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -121,14 +122,18 @@ img {
 }
 
 .site-nav__button {
+  position: relative;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   width: 40px;
   height: 40px;
-  background-color: var(--primary-background-color);
-  border: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -138,14 +143,16 @@ img {
 }
 
 .site-nav__icon--close {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
   justify-content: center;
   align-items: center;
   fill: var(--logo-dark-colore);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  width: 19px;
-  height: 19px;
 }
 
 .site-nav__icon {
@@ -156,8 +163,6 @@ img {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  width: 24px;
-  height: 16px;
 }
 
 .site-nav__button:hover > .site-nav__icon,
@@ -166,7 +171,6 @@ img {
 }
 
 .menu-container {
-  width: 100%;
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
@@ -176,16 +180,28 @@ img {
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
     background-color: var(--white-colore);
     left: 0;
-    width: 100%;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
     z-index: 1;
-    padding: 50px 40px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-bottom: 50px;
   }
   .menu-container.is-open {
-    display: block;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    align-items: center;
+    width: 100%;
   }
 }
 
@@ -262,12 +278,6 @@ img {
   display: block;
 }
 
-@media screen and (max-width: 767px) {
-  .site-nav {
-    margin: 0 auto 302px 0;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
@@ -325,6 +335,10 @@ img {
   display: block;
 }
 
+.site-nav__link:hover, .site-nav__link:focus {
+  color: var(--accent-colore);
+}
+
 @media screen and (max-width: 767px) {
   .site-nav__link {
     text-align: start;
@@ -340,14 +354,16 @@ img {
   }
 }
 
-.site-nav__link:hover, .site-nav__link:focus {
-  color: var(--accent-colore);
+.site-nav__link--current {
+  color: var(--primary-text-colore);
 }
 
-.site-nav__link--current {
-  content: ' ';
-  position: relative;
-  color: var(--accent-colore);
+@media screen and (min-width: 768px) {
+  .site-nav__link--current {
+    content: ' ';
+    position: relative;
+    color: var(--accent-colore);
+  }
 }
 
 @media screen and (min-width: 768px) {

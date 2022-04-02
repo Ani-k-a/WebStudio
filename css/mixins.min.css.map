@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/utils/mixins.scss",
+        "../sass/utils/decimals.scss"
+    ],
+    "names": [],
+    "file": "mixins.min.css"
+}

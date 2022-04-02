@@ -8,27 +8,34 @@
   display: flex;
 }
 .site-nav__button {
+  position: relative;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   width: 40px;
   height: 40px;
-  background-color: var(--primary-background-color);
-  border: 0;
+
   @media screen and (min-width: $tablet) {
     display: none;
   }
 }
 .site-nav__icon--close {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
   justify-content: center;
   align-items: center;
-  fill: var(--logo-dark-colore);
+  fill: var(--primary-text-colore);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  width: 19px;
-  height: 19px;
 }
 .site-nav__icon {
   display: flex;
@@ -38,35 +45,41 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  width: 24px;
-  height: 16px;
   .site-nav__button:hover > &,
   .site-nav__button:focus > & {
     fill: var(--accent-colore);
   }
 }
 .menu-container {
-  @media screen and (max-width: 767px) {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: var(--white-colore);
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    padding: 50px 40px;
-    &.is-open {
-      display: block;
-    }
-  }
-  width: 100%;
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: fixed;
+    background-color: var(--white-colore);
+    left: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    &.is-open {
+      display: flex;
+      align-content: space-between;
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    align-items: center;
+   width: 100%;}
 }
 .social-contacts {
   display: flex;
+  flex-wrap: wrap;
   @media screen and (min-width: $tablet) {
     display: none;
   }

@@ -9,18 +9,20 @@
       var(--hero-overlay-colore),
       var(--hero-overlay-colore)
     ),
-    url(../images/hero_background.jpg);
+    url(../images/hero/hero_background.jpg);
+  background-image: -webkit-image-set(url(../images/hero/hero_background.webp) 1x);
+@include mq(retina) {
+  background-image: url(../images/hero/hero_background@2x.jpg);
+  background-image: -webkit-image-set(url(../images/hero/hero_background@2x.webp) 2x);
+}
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  @media screen and (min-width: $tablet) {
-    max-width: 480px;
-  }
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
     max-width: 768px;
   }
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
@@ -41,11 +43,11 @@
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    @media screen and (max-width: 1199px) {
+    @include mq (notDesktop) {
       width: 100%;
       max-width: 360px;
     }
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
       font-size: 44px;
       max-width: 696px;
     }
