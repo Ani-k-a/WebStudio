@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -16,9 +16,6 @@
     display: flex;
     justify-content: space-between;
   }
-  @include mq(desktop) {
-  }
-
   &__logo {
     @include mq(tablet) {
       margin-right: 88px;
@@ -39,7 +36,7 @@
 }
 .site-nav__item {
   &:not(:last-child) {
-    @include mq(mobile-only)px) {
+    @include mq(mobile-only) {
       margin-bottom: 32px;
     }
     @include mq(tablet) {
@@ -58,11 +55,11 @@
   line-height: 1.18;
   letter-spacing: 0.02em;
   display: block;
-&:hover,
-&:focus {
-  color: var(--accent-colore);
-}
-  @include mq(mobile-only)px) {
+  &:hover,
+  &:focus {
+    color: var(--accent-colore);
+  }
+  @include mq(mobile-only) {
     text-align: start;
   }
   @include mq(tablet) {
@@ -100,7 +97,7 @@
   transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     margin-bottom: 54px;
     display: flex;
     flex-direction: column-reverse;
@@ -115,7 +112,7 @@
   }
 }
 .contacts__item {
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     display: block;
   }
   @include mq(tablet) {
@@ -134,7 +131,7 @@
 }
 .contacts__icon {
   margin-right: 10px;
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     display: none;
   }
 }
@@ -146,19 +143,19 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     display: flex;
   }
 }
 .contacts__link--mail {
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.02em;
   }
 }
 .contacts__link--phone {
-  @include mq(mobile-only)px) {
+  @include mq(mobile-only) {
     padding-bottom: 32px;
     color: var(--accent-colore);
     font-weight: 500;
