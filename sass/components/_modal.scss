@@ -9,12 +9,12 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 767px) {
+  @include mq(mobile-only) {
     padding: 93px 15px;
   }
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
   }
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
   }
 
   &.is-hidden {
@@ -30,17 +30,17 @@
   width: 450px;
   background-color: #ffffff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 767px) {
+  @include mq(mobile-only) {
     margin-left: auto;
     margin-right: auto;
   }
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     left: 50%;
   }
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     width: 528px;
   }
 
@@ -60,11 +60,11 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   right: 8px;
   top: 8px;
-  @media screen and (max-width: 767px) {
+  @include mq(mobile-only) {
     margin-right: -30px;
     margin-left: auto;
   }
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
     position: absolute;
   }
 }
@@ -94,7 +94,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-colore);
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     width: 448px;
   }
 }
@@ -123,9 +123,9 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 42px;
   padding-right: 16px;
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
   }
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     width: 448px;
   }
 
@@ -180,9 +180,9 @@
   font-size: 12px;
   line-height: 1.16px;
   letter-spacing: 0.03em;
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
   }
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     font-size: 14px;
     line-height: 1.71px;
   }

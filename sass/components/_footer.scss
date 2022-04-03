@@ -2,22 +2,22 @@
   background-color: var(--footer-background-color);
 
   &__container {
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
       padding-left: 76px;
       padding-right: 89px;
     }
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
       display: flex;
       align-items: baseline;
       padding-left: 15px;
       padding-right: 15px;
     }
-    @media screen and (max-width: 1199px) {
+    @include mq(notDesktop) {
       text-align: center;
     }
   }
   &__main {
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
@@ -30,7 +30,7 @@
 }
 .actionsosial {
   margin-bottom: 60px;
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     margin-left: 87px;
   }
   &__title {

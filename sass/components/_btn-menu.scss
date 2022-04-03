@@ -21,7 +21,7 @@
   width: 40px;
   height: 40px;
 
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
     display: none;
   }
 }
@@ -55,7 +55,7 @@
   flex-grow: 1;
   justify-content: space-between;
   text-align: center;
-  @media screen and (max-width: 767px) {
+  @include mq(mobile-only) {
     display: none;
     position: fixed;
     background-color: var(--white-colore);
@@ -73,14 +73,14 @@
       flex-direction: column;
     }
   }
-  @media screen and (min-width: $desktop) {
+  @include mq(desktop) {
     align-items: center;
    width: 100%;}
 }
 .social-contacts {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (min-width: $tablet) {
+  @include mq(tablet) {
     display: none;
   }
 }

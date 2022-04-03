@@ -1,5 +1,5 @@
 .services {
-  @media screen and (max-width: 1199px) {
+  @include mq(notDesktop) {
     display: none;
   }
 
