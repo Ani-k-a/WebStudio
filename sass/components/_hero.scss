@@ -12,18 +12,17 @@
   background-image: linear-gradient(to right, var(--hero-overlay-colore)),
     url('../images/hero/hero480.jpg');
     @include mq(retina) {
-      background-image: linear-gradient(to right, var(--hero-overlay-colore)),
-    url('../images/hero/480@2x.jpg');
+    background-image: linear-gradient(to right, var(--hero-overlay-colore)),
+    url('../images/hero/hero480@2x.jpg');
     }
   }
   @include mq(tablet) {
     max-width: 768px;
     background-image: linear-gradient(to right, var(--hero-overlay-colore)),
-      url('../images/hero/hero768.jpg');
-  
+    url('../images/hero/hero768.jpg');
     @include mq(retina) {
       background-image: linear-gradient(to right, var(--hero-overlay-colore)),
-        url('../images/hero/hero768@2x.jpg');
+      url('../images/hero/hero768@2x.jpg');
     }
   }
   @include mq(desktop) {
@@ -37,7 +36,9 @@
       background-image: linear-gradient(to right, var(--hero-overlay-colore)),
         url('../images/hero/hero1600@2x.jpg');
     }
+    
   }
+ 
   &__container {
     padding: 0;
     text-align: center;
