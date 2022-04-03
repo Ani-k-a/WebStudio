@@ -507,12 +507,6 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(to right, var(--hero-overlay-colore)), url("../images/hero/hero480@2x.jpg");
-  }
-}
-
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
@@ -1282,6 +1276,7 @@ img {
   letter-spacing: 00.03em;
   color: var(--white-colore);
   padding: 77px 24px;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {

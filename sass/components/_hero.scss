@@ -11,10 +11,10 @@
   @include mq(mobile) {
   background-image: linear-gradient(to right, var(--hero-overlay-colore)),
     url('../images/hero/hero480.jpg');
-    @include mq(retina) {
-    background-image: linear-gradient(to right, var(--hero-overlay-colore)),
-    url('../images/hero/hero480@2x.jpg');
-    }
+    // @include mq(retina) {
+    // background-image: linear-gradient(to right, var(--hero-overlay-colore)),
+    // url('../images/hero/hero480@2x.jpg');
+    // }
   }
   @include mq(tablet) {
     max-width: 768px;
