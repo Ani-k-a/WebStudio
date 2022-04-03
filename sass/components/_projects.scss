@@ -133,22 +133,13 @@
   transition: transform 250ms ease;
   color: var(--white-colore);
   border-radius: 2px;
-
   &__text {
     position: absolute;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 00.03em;
     color: var(--white-colore);
-    padding: 77px 24px;
-    @include mq(tablet) {
-      padding: 49px 24px;
-    }
-    @include mq(desktop) {
-    padding: 63px 24px;
-    }
   }
-
   .projects-list__item:hover &,
   .projects-list__item:focus & {
     transform: translateY(0);
