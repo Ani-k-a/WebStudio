@@ -149,6 +149,11 @@
     color: var(--white-colore);
     padding: 77px 24px;
     margin: 0;
+@media screen and (max-width: 478px) {
+  font-size: 12px;
+  padding: 49px 24px;
+}
+
     @include mq(tablet) {
       padding: 49px 24px;
     }

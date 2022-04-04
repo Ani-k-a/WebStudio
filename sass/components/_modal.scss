@@ -30,6 +30,9 @@
   width: 450px;
   background-color: #ffffff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 478px) {
+    width: auto;
+  }
   @include mq(mobile-only) {
     margin-left: auto;
     margin-right: auto;
@@ -94,6 +97,10 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-colore);
+  @media screen and (max-width: 478px) {
+    font-size: 16px;
+    width: auto;
+  }
   @include mq(desktop) {
     width: 448px;
   }
@@ -123,6 +130,9 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 42px;
   padding-right: 16px;
+  @media screen and (max-width: 478px) {
+    width: 100%;
+  }
   @include mq(tablet) {
   }
   @include mq(desktop) {
@@ -153,7 +163,9 @@
   padding: 12px 16px;
   height: 120px;
   resize: none;
-
+@media screen and (max-width: 478px) {
+  width: 100%;
+}
   &::placeholder {
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -162,6 +174,7 @@
 }
 .form__lable--checkbox {
   display: flex;
+  
   flex-direction: inherit;
   box-sizing: border-box;
   align-items: center;
@@ -172,6 +185,7 @@
 .form__input--checkbox {
   position: absolute;
   appearance: none;
+  
 }
 .form__text--checkbox {
   display: block;
@@ -180,6 +194,10 @@
   font-size: 12px;
   line-height: 1.16px;
   letter-spacing: 0.03em;
+@media screen and (max-width: 478px) {
+  display: flex;
+  flex-wrap: wrap;
+line-height: 1;}
   @include mq(tablet) {
   }
   @include mq(desktop) {
@@ -192,6 +210,7 @@
 }
 .form__icon--checkbox {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 16px;
