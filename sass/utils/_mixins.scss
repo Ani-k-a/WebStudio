@@ -1,4 +1,4 @@
-@import "decimals";
+@import "./decimals";
 
 @mixin bordered($color) {
     border-top: 1px solid $color;
@@ -35,10 +35,12 @@ $font-vars: ("f-s": 14px,
     @return $number;
 }
 
-@mixin fonts($fs: getValue("f-s"),
+@mixin fonts(
+    $fs: getValue("f-s"),
     $lh: getValue("l-h"),
     $fw: getValue("f-w"),
-    $ls: getValue("l-s")) {
+    $ls: getValue("l-s")
+    ) {
     $px: px;
     $em: em;
 

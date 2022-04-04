@@ -59,11 +59,6 @@
   &:focus {
     color: var(--accent-colore);
   }
-
-  @media screen and (max-width: 400px) {
-    @include fonts($fw: 500, $fsz: 2rem, $lh: 3rem);
-  }
-  
   
   @include mq(mobile-only) {
     text-align: start;
@@ -166,6 +161,9 @@
     font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
   }
 }
 .contacts__item:hover,

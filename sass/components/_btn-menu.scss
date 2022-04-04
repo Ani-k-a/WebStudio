@@ -84,21 +84,25 @@
     display: none;
   }
 }
-
-
+.social-contacts__item {
+  display: flex;
+}
 .social-contacts__item:not(:last-child)::after {
     content: "";
-    display: block;
     width: 1px;
     height: 100%;
     margin: 0 10px;
     background-color: rgba(33, 33, 33, 0.2);
 }
+
 .social-contacts__link {
-  display: inline;
   color: var(--accent-colore);
   text-decoration: none;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+  display: flex;
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
 }
