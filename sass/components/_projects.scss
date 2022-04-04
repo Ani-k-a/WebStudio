@@ -70,6 +70,7 @@
     margin: 15px;
     background-color: var(--white-colore);
     width: 100%;
+    display: flex;
     @include mq(tablet) {
       width: calc((100% - 4 * 15px) / 2);
     }
@@ -79,6 +80,11 @@
   }
   &__link {
     text-decoration: none;
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
   }
   &__card {
     width: 100%;
@@ -100,6 +106,7 @@
     border-bottom: 1px solid var(--portfolio-background-colore);
     border-left: 1px solid var(--portfolio-background-colore);
     padding: 20px 24px;
+    flex-grow: 1;
   }
   &__title {
     color: var(--primary-text-colore);

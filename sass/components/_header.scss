@@ -59,6 +59,12 @@
   &:focus {
     color: var(--accent-colore);
   }
+
+  @media screen and (max-width: 400px) {
+    @include fonts($fw: 500, $fsz: 2rem, $lh: 3rem);
+  }
+  
+  
   @include mq(mobile-only) {
     text-align: start;
   }
@@ -69,12 +75,10 @@
     letter-spacing: 0.02em;
   }
   
-  &--current {
-    color: var(--primary-text-colore);
-    @include mq(tablet) {
+  &--current {    
     content: ' ';
     position: relative;
-    color: var(--accent-colore);}
+    color: var(--accent-colore);
   }
 
   &--current::after {
